@@ -13,6 +13,7 @@ function link () {
     for filename in .??*; do
         [ ${filename} = ".git" ] && continue
         [ ${filename} = ".gitignore" ] && continue
+        [ ${filename} = ".github" ] && continue
 
         # シンボリックリンクを貼る
         ln -snfv ${DOTFILES_DIR}/${filename} ${HOME}/${filename}
@@ -23,9 +24,10 @@ function unlink () {
     for filename in .??*; do
         [ ${filename} = ".git" ] && continue
         [ ${filename} = ".gitignore" ] && continue
+        [ ${filename} = ".github" ] && continue
 
         # シンボリックリンクを削除
-        unlink ${DOTFILES_DIR}/${filename}
+        rm ${HOME}/${filename}
     done
 }
 
