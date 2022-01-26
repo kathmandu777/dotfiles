@@ -11,7 +11,7 @@ jobs:
       - name: Install required packages
         run: apt-get update && apt-get install -y git sudo
       - name: Install dotfiles
-        run: .bin/setup.sh bash
+        run: ./setup.sh bash
 
   macos:
     runs-on: macos-latest
@@ -20,7 +20,7 @@ jobs:
       - name: Install required packages
         run: brew update && brew install git
       - name: Install dotfiles
-        run: .bin/setup.sh bash
+        run: ./setup.sh bash
 
   # centos:
   #   runs-on: ubuntu-latest
