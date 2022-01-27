@@ -18,6 +18,3 @@ alias d='docker'
 
 # python venv
 alias activate='source venv/bin/activate'
-
-export PS1='\[\e[01;36m\]\w\[\e[01;32m\]$(__git_ps1 " (%s)" 2>/dev/null)\[\e[0m\] \$ '
-export GIT_PS1_SHOWDIRTYSTATE=1

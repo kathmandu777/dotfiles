@@ -116,7 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ${HOME}/dotfiles/bash/alias.sh
-source ${HOME}/dotfiles/bash/git_setup.sh
+source ${HOME}/dotfiles/common/alias.sh
+source ${HOME}/dotfiles/common/git.sh
+source ${HOME}/dotfiles/bash/config.sh
 
 cd ~
