@@ -107,6 +107,9 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 source ${HOME}/dotfiles/zsh/plugins.zsh
+if [ -f ${HOME}/dotfiles/zsh/local.zsh ]; then
+    source ${HOME}/dotfiles/zsh/local.zsh
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ${HOME}/dotfiles/zsh/p10k.zsh
