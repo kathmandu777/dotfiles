@@ -38,6 +38,25 @@ function install_git_tools () {
     chmod a+x ${HOME}/.git-prompt.sh
 }
 
+function install_zsh () {
+    # zshをインストール
+    case $(uname -s) in
+        Linux*)
+            sudo apt-get install zsh -y
+            ;;
+        Darwin*)
+            brew install zsh
+            ;;
+        *)
+            echo "Unknown OS"
+            exit 0
+            ;;
+    esac
+
+    # zshをデフォルトにする
+    chsh -s $(which zsh)
+}
+
 function main () {
     if [ $# -eq 0 ]; then
         usage
@@ -51,6 +70,10 @@ function main () {
                 ;;
             bash)
                 install_git_tools
+                link
+                ;;
+            zsh)
+                install_zsh
                 link
                 ;;
             help|--help|-h)
