@@ -6,6 +6,7 @@ function usage () {
     echo "  link: Link dotfiles to home directory"
     echo "  unlink: Unlink dotfiles from home directory"
     echo "  bash: Setup for bash"
+    echo "  zsh: Setup for zsh"
     echo "  help  |  -h  |  --help: Print usage"
 }
 
