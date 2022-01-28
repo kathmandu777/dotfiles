@@ -8,6 +8,8 @@ function usage () {
     echo "  bash: Setup for bash"
     echo "  zsh: Setup for zsh"
     echo "  vscode: Setup for vscode"
+    echo "  save_vscode_extensions: Save installed vscode extensions to vscode/extensions.txt"
+    echo "  install_vscode_extensions: Install vscode extensions from vscode/extensions.txt"
     echo "  help  |  -h  |  --help: Print usage"
 }
 
