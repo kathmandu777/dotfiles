@@ -7,6 +7,7 @@ function usage () {
     echo "  unlink: Unlink dotfiles from home directory"
     echo "  bash: Setup for bash"
     echo "  zsh: Setup for zsh"
+    echo "  vscode: Setup for vscode"
     echo "  help  |  -h  |  --help: Print usage"
 }
 
@@ -58,6 +59,36 @@ function install_zsh () {
     chsh -s $(which zsh)
 }
 
+function link_vscode_config () {
+    case $(uname -s) in
+        Linux*)
+            VSCODE_CONFIG_DIR="${HOME}/.config/Code/User"
+            ;;
+        Darwin*)
+            VSCODE_CONFIG_DIR="${HOME}/Library/Application\ Support/Code/User"
+            ;;
+        *)
+            echo "Unknown OS"
+            exit 0
+            ;;
+    esac
+
+    # vscodeの設定をシンボリックリンク
+    ln -snfv ${DOTFILES_DIR}/vscode/settings.json ${VSCODE_CONFIG_DIR}/settings.json
+    ln -snfv ${DOTFILES_DIR}/vscode/keybindings.json ${VSCODE_CONFIG_DIR}/keybindings.json
+}
+
+function save_vscode_extensions () {
+    code --list-extensions > ${DOTFILES_DIR}/vscode/extensions.txt
+}
+
+function install_vscode_extensions () {
+    cat ${DOTFILES_DIR}/vscode/extensions.txt | while read line
+    do
+        code --install-extension $line
+    done
+}
+
 function main () {
     if [ $# -eq 0 ]; then
         usage
@@ -76,6 +107,15 @@ function main () {
             zsh)
                 install_zsh
                 link
+                ;;
+            vscode)
+                link_vscode_config
+                ;;
+            save_vscode_extensions)
+                save_vscode_extensions
+                ;;
+            install_vscode_extensions)
+                install_vscode_extensions
                 ;;
             help|--help|-h)
                 usage
