@@ -1,0 +1,19 @@
+name: macos
+
+on:
+  push:
+    paths-ignore:
+      - README.md
+
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install required packages
+        run: brew update && brew install git
+      - name: Setup dotfiles for zsh
+        run: ./setup.sh zsh
+      - name: Enter zsh
+        run: zsh

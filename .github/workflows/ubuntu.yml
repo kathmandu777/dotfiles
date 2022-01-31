@@ -1,0 +1,20 @@
+name: ubuntu
+
+on:
+  push:
+    paths-ignore:
+      - README.md
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    container: ubuntu:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install required packages
+        run: apt-get update && apt-get install -y git sudo
+      - name: Setup dotfiles for zsh
+        run: ./setup.sh zsh
+      - name: Enter zsh
+        run: zsh
