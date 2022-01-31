@@ -10,22 +10,22 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apt-get update && apt-get install -y git sudo
-      - name: Install dotfiles
+      - name: Setup dotfiles
         run: ./setup.sh zsh
       - name: Load .zshrc
-        run:  source ${HOME}/.zshrc
+        run: source ${HOME}/.zshrc
         
 
   macos:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Install required packages
         run: brew update && brew install git
-      - name: Install dotfiles
+      - name: Setup dotfiles
         run: ./setup.sh zsh
       - name: Load .zshrc
-        run:  source ${HOME}/.zshrc
+        run: source ${HOME}/.zshrc
 
   # centos:
   #   runs-on: ubuntu-latest
