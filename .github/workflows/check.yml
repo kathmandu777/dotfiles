@@ -12,6 +12,9 @@ jobs:
         run: apt-get update && apt-get install -y git sudo
       - name: Install dotfiles
         run: ./setup.sh zsh
+      - name: Load .zshrc
+        run:  source ${HOME}/.zshrc
+        
 
   macos:
     runs-on: macos-latest
@@ -21,6 +24,8 @@ jobs:
         run: brew update && brew install git
       - name: Install dotfiles
         run: ./setup.sh zsh
+      - name: Load .zshrc
+        run:  source ${HOME}/.zshrc
 
   # centos:
   #   runs-on: ubuntu-latest

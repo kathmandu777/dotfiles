@@ -105,12 +105,10 @@ function main () {
             bash)
                 install_git_tools
                 link
-                source ${HOME}/.bashrc
                 ;;
             zsh)
                 install_zsh
                 link
-                source ${HOME}/.zshrc
                 ;;
             vscode)
                 link_vscode_config
