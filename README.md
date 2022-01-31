@@ -1,4 +1,9 @@
 # dotfiles
+[![ubuntu](https://github.com/kathmandu777/dotfiles/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/kathmandu777/dotfiles/actions/workflows/ubuntu.yml)
+[![macos](https://github.com/kathmandu777/dotfiles/actions/workflows/macos.yml/badge.svg)](https://github.com/kathmandu777/dotfiles/actions/workflows/macos.yml)
+[![lint](https://github.com/kathmandu777/dotfiles/actions/workflows/lint.yml/badge.svg)](https://github.com/kathmandu777/dotfiles/actions/workflows/lint.yml)
+
+
 This is my personal dotfiles repository.
 
 ## Details
