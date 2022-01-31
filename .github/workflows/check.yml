@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apt-get update && apt-get install -y git sudo
-      - name: Setup dotfiles
+      - name: Setup dotfiles for zsh
         run: ./setup.sh zsh
-      - name: Load .zshrc
+      - name: Enter zsh
         run: zsh
         
 
@@ -22,9 +22,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install required packages
         run: brew update && brew install git
-      - name: Setup dotfiles
+      - name: Setup dotfiles for zsh
         run: ./setup.sh zsh
-      - name: Load .zshrc
+      - name: Enter zsh
         run: zsh
 
   # centos:
