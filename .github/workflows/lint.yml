@@ -1,9 +1,11 @@
-# name: lint
+name: lint
 
 on:
   push:
     paths-ignore:
       - README.md
+
+jobs:
   lint:
     runs-on: ubuntu-latest
     container: ubuntu:latest
