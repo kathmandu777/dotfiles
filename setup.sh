@@ -92,6 +92,11 @@ function install_vscode_extensions () {
     done
 }
 
+function install_fzf () {
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+}
+
 function install_gh () {
     case $(uname -s) in
         Linux*)
@@ -128,6 +133,7 @@ function main () {
                 ;;
             zsh)
                 install_zsh
+                install_fzf
                 install_gh
                 link
                 ;;
@@ -142,6 +148,9 @@ function main () {
                 ;;
             install_gh)
                 install_gh
+                ;;
+            install_fzf)
+                install_fzf
                 ;;
             help|--help|-h)
                 usage
