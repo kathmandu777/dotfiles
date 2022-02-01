@@ -140,6 +140,9 @@ function main () {
             install_vscode_extensions)
                 install_vscode_extensions
                 ;;
+            install_gh)
+                install_gh
+                ;;
             help|--help|-h)
                 usage
                 ;;
