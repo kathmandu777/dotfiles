@@ -10,6 +10,7 @@ function usage () {
     echo "  vscode: Setup for vscode"
     echo "  save_vscode_extensions: Save installed vscode extensions to vscode/extensions.txt"
     echo "  install_vscode_extensions: Install vscode extensions from vscode/extensions.txt"
+    echo "  install_gh: Install gh which is GitHub CLI"
     echo "  help  |  -h  |  --help: Print usage"
 }
 
@@ -91,6 +92,24 @@ function install_vscode_extensions () {
     done
 }
 
+function install_gh () {
+    case $(uname -s) in
+        Linux*)
+            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+            echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+            sudo apt update
+            sudo apt install gh
+            ;;
+        Darwin*)
+            brew install gh
+            ;;
+        *)
+            echo "Unknown OS"
+            exit 0
+            ;;
+    esac
+}
+
 function main () {
     if [ $# -eq 0 ]; then
         usage
@@ -104,10 +123,12 @@ function main () {
                 ;;
             bash)
                 install_git_tools
+                install_gh
                 link
                 ;;
             zsh)
                 install_zsh
+                install_gh
                 link
                 ;;
             vscode)

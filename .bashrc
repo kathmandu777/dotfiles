@@ -120,4 +120,6 @@ source ${HOME}/dotfiles/common/alias.sh
 source ${HOME}/dotfiles/common/git.sh
 source ${HOME}/dotfiles/bash/config.sh
 
-cd ~
+# gh
+eval "$(gh completion -s bash)"
+source ${HOME}/dotfiles/common/gh.sh

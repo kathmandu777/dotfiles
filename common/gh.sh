@@ -1,0 +1,1 @@
+gh alias set open 'repo view --web'
