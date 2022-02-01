@@ -80,8 +80,6 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 source ${HOME}/dotfiles/common/alias.sh
 source ${HOME}/dotfiles/common/git.sh
 
-cd ~
-
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -120,3 +118,7 @@ source ${HOME}/dotfiles/zsh/fzf.zsh
 
 # enhancd
 source ${HOME}/dotfiles/zsh/enhancd.zsh
+
+# gh
+eval "$(gh completion -s zsh)"
+source ${HOME}/dotfiles/common/gh.sh
