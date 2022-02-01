@@ -113,3 +113,10 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ${HOME}/dotfiles/zsh/p10k.zsh
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ${HOME}/dotfiles/zsh/fzf.zsh
+
+# enhancd
+source ${HOME}/dotfiles/zsh/enhancd.zsh

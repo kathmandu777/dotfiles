@@ -11,3 +11,9 @@ autoload -Uz compinit && compinit
 
 # zsh-syntax-highlighting
 zinit light zdharma-continuum/fast-syntax-highlighting
+
+# fzf (interactive filtering tool)
+zinit light junegunn/fzf-bin
+
+# enhancd
+zinit light b4b4r07/enhancd
