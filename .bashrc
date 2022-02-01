@@ -123,3 +123,6 @@ source ${HOME}/dotfiles/bash/config.sh
 # gh
 eval "$(gh completion -s bash)"
 source ${HOME}/dotfiles/common/gh.sh
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
