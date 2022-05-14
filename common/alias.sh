@@ -10,12 +10,12 @@ alias ....='cd ../../..'
 
 # ls
 alias ls='ls -F --color=auto'
-alias lsl='ls -lh --color=auto –time-style="+%Y/%m/%d %H:%M:%S"'
-alias ll='ls -lh --color=auto –time-style="+%Y/%m/%d %H:%M:%S"'
+alias lsl='ls -lh --color=auto --time-style="+%Y/%m/%d %H:%M:%S"'
+alias ll='ls -lh --color=auto --time-style="+%Y/%m/%d %H:%M:%S"'
 alias la='ls -aF --color=auto'
 alias lsa='ls -aF --color=auto'
-alias lsla='ls -lah --color=auto –time-style="+%Y/%m/%d %H:%M:%S"'
-alias lsal='ls -alh --color=auto –time-style="+%Y/%m/%d %H:%M:%S"'
+alias lsla='ls -lah --color=auto --time-style="+%Y/%m/%d %H:%M:%S"'
+alias lsal='ls -alh --color=auto --time-style="+%Y/%m/%d %H:%M:%S"'
 
 # python
 alias py='python3'
