@@ -3,3 +3,5 @@
 	email = mahhakatomanato@gmail.com
 [color]
 	ui = auto
+[core]
+	editor = vim
