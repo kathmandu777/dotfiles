@@ -122,3 +122,6 @@ source ${HOME}/dotfiles/zsh/enhancd.zsh
 # gh
 eval "$(gh completion -s zsh)"
 source ${HOME}/dotfiles/common/gh.sh
+
+# alias for zsh
+source ${HOME}/dotfiles/zsh/alias.zsh
