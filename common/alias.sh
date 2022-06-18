@@ -32,6 +32,7 @@ alias dot='cd $HOME/dotfiles'
 
 # docker
 alias d='docker'
+alias dc='docker-compose' # dc commandが存在するがほぼ使用しないので上書きする
 
 # apt
 alias api='sudo apt install'
