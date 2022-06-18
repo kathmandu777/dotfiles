@@ -16,6 +16,9 @@ alias la='ls -aF --color=auto'
 alias lsa='ls -aF --color=auto'
 alias lsla='ls -lah --color=auto --time-style="+%Y/%m/%d %H:%M:%S"'
 alias lsal='ls -alh --color=auto --time-style="+%Y/%m/%d %H:%M:%S"'
+if [ `uname` = "Darwin" ]; then # Mac OS X (--time-style)
+    alias ls='gls'
+fi
 
 # python
 alias py='python3'

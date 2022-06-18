@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Install required packages
         run: brew update && brew install git
+      - name: Install coreutils for gls command
+        run: brew install coreutils
       - name: Setup dotfiles for zsh
         run: ./setup.sh zsh
       - name: Enter zsh
