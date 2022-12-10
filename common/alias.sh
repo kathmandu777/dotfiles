@@ -2,6 +2,7 @@
 alias so='source'
 alias c='clear'
 alias vs='code .'
+alias tf='terraform'
 
 # cd
 alias ..='cd ..'
